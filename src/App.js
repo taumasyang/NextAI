@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import { Layout, Typography } from 'antd'
 import ChatComponent from './components/ChatComponent'
 import RenderQA from './components/RenderQA'
+import PdfUploader from './components/PdfUploader'
 const chatComponentStyle = { position: 'fixed', bottom: '0', width: '80%', left: '10%', marginBottom: '20px' }
 const renderQAStyle = { height: '50%', overflowY: 'auto' }
+const pdfUploaderStyle = { margin: 'auto', paddingTop: '80px' }
 const App = () => {
 	const [conversation, setConversation] = useState([])
 	const [isLoading, setIsLoading] = useState(false)
@@ -17,6 +19,9 @@ const App = () => {
 					<Title style={{ color: 'white ' }}>Next AI</Title>
 				</Header>
 				<Content style={{ width: '80%', margin: 'auto' }}>
+					<div style={pdfUploaderStyle}>
+						<PdfUploader />
+					</div>
 					<div style={renderQAStyle}>
 						<RenderQA conversation={conversation} isLoading={isLoading} />
 					</div>
