@@ -3,6 +3,7 @@ import { Layout, Typography } from 'antd'
 import ChatComponent from './components/ChatComponent'
 import RenderQA from './components/RenderQA'
 import PdfUploader from './components/PdfUploader'
+import VoiceInterface from './components/VoiceInterface'
 const chatComponentStyle = { position: 'fixed', bottom: '0', width: '80%', left: '10%', marginBottom: '20px' }
 const renderQAStyle = { height: '50%', overflowY: 'auto' }
 const pdfUploaderStyle = { margin: 'auto', paddingTop: '80px' }
